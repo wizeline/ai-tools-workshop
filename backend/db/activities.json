@@ -1,0 +1,62 @@
+{
+    "1": {
+        "id": "1",
+        "sports": "Football",
+        "description": "Friendly football match",
+        "startDate": 1648771200000,
+        "endDate": 1648774800000,
+        "lookingFor": 10,
+        "ownerId": "1",
+        "participantsIds": ["1", "2", "3"],
+        "applicantsIds": ["2", "3"],
+        "status": "Open"
+    },
+    "2": {
+        "id": "2",
+        "sports": "Running",
+        "description": "5k run",
+        "startDate": 1648857600000,
+        "endDate": 1648861200000,
+        "lookingFor": 20,
+        "ownerId": "6",
+        "participantsIds": ["6", "7", "8"],
+        "applicantsIds": ["7", "8"],
+        "status": "Closed"
+    },
+    "3": {
+        "id": "3",
+        "sports": "Yoga",
+        "description": "Morning yoga session",
+        "startDate": 1648944000000,
+        "endDate": 1648947600000,
+        "lookingFor": 5,
+        "ownerId": "4",
+        "participantsIds": ["4", "5"],
+        "applicantsIds": ["5"],
+        "status": "Open"
+    },
+    "4": {
+        "id": "4",
+        "sports": "Basketball",
+        "description": "Basketball tournament",
+        "startDate": 1649030400000,
+        "endDate": 1649034000000,
+        "lookingFor": 10,
+        "ownerId": "2",
+        "participantsIds": ["2", "3", "4"],
+        "applicantsIds": ["3", "4"],
+        "status": "Completed"
+    },
+    "5": {
+        "id": "5",
+        "sports": "Swimming",
+        "description": "Swimming competition",
+        "startDate": 1649116800000,
+        "endDate": 1649120400000,
+        "lookingFor": 8,
+        "ownerId": "5",
+        "participantsIds": ["5", "6", "7"],
+        "applicantsIds": ["6", "7"],
+        "status": "Open"
+    }
+}
