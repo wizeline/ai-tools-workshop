@@ -4,7 +4,7 @@ In this module, we will leverage GitHub Copilot to assist us in the creation of 
 This document will list the steps to follow in order to have the server up and running with all the necessary functionnality.
 
 &nbsp;
-## Set the Express server up
+## Chapter 1: Set the Express server up
 
 ### Step 1: Initiate Express server
 

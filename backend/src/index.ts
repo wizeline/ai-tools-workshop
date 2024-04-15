@@ -1,7 +1,5 @@
 const express = require("express");
 
-const helpers = require("./utils/json-helpers");
-
 const app = express();
 const port = 3000;
 
