@@ -4,18 +4,9 @@ In this module, we will leverage GitHub Copilot to assist us in the creation of 
 This document will list the steps to follow in order to have the server up and running with all the necessary functionnality.
 
 &nbsp;
-## Set the server up
+## Set the Express server up
 
-### Step 1: Initiate Node
-
-You do not remember how to initiate a Node.js application? GitHub Copilot is here for you.
-In the chat, enter:
-> How can I initiate a Node application?
-
-Then open your VS Code terminal, make sure you are in the backend directory, and click on the "Insert into Terminal" icon from the command suggested by Copilot, which should be `npm init -y`.
-Run the command in the terminal and the package.json file will be created.
-
-### Step 2: Initiate Express server
+### Step 1: Initiate Express server
 
 Ask Copilot in the chat:
 > How can I create an express server?
