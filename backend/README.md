@@ -35,7 +35,7 @@ This is it! Our database is populated with 10 users, and 5 activities, based on 
 &nbsp;
 ## Set the server up
 
-### Step 3: Initiate Node
+### Step 1: Initiate Node
 
 You do not remember how to initiate a Node.js application? GitHub Copilot is here for you.
 In the chat, enter:
@@ -44,7 +44,7 @@ In the chat, enter:
 Then open your VS Code terminal, make sure you are in the backend directory, and click on the "Insert into Terminal" icon from the command suggested by Copilot, which should be `npm init -y`.
 Run the command in the terminal and the package.json file will be created.
 
-### Step 4: Initiate Express server
+### Step 2: Initiate Express server
 
 Ask Copilot in the chat:
 > How can I create an express server?
