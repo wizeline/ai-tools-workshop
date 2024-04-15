@@ -90,4 +90,5 @@ module.exports = {
   getAllTable,
   updateElementById,
   deleteElementById,
+  createElement,
 };
