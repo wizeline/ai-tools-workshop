@@ -71,7 +71,7 @@ Note that we did not even specify from where we want to import the controllers, 
 
 Do the same thing with `backend/src/routes/activities.ts`.
 
-## Step 3.3: Create our controllers
+### Step 3.3: Create our controllers
 
 We have already referenced the controllers files in the previous step, but they do not exist yet. Let's create the files `backend/src/controllers/users.ts` and `backend/src/controllers/activities.ts`
 
