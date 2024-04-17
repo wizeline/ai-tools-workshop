@@ -1,18 +1,17 @@
 const fs = require("fs");
 
-const getPath = (tableName: string) => {
+export const getPath = (tableName: string) => {
   const path = require("path");
   return path.resolve(__dirname, `../../db/${tableName}.json`);
 };
 
-const readAllTable = async (tableName: string): Promise<any> => {
+export const readAllTable = async (tableName: string): Promise<any> => {
   if (!tableName) {
     throw new Error("tableName is required!");
   }
   return new Promise((resolve, reject) =>
     fs.readFile(getPath(tableName), "utf8", (err: Error, data: any) => {
       if (err) {
-        console.error(err);
         reject(err);
       }
       resolve(JSON.parse(data));
@@ -20,7 +19,7 @@ const readAllTable = async (tableName: string): Promise<any> => {
   );
 };
 
-const writeTable = async (tableName: string, data: any) => {
+export const writeTable = async (tableName: string, data: any) => {
   if (!tableName) {
     throw new Error("tableName is required!");
   }
@@ -30,7 +29,6 @@ const writeTable = async (tableName: string, data: any) => {
   return new Promise((resolve, reject) =>
     fs.writeFile(getPath(tableName), JSON.stringify(data), (err: Error) => {
       if (err) {
-        console.error(err);
         reject(err);
       }
       resolve(data);
