@@ -51,8 +51,11 @@ export const updateUser = async (
   res: Response
 ): Promise<void> => {
   try {
-    await updateElementById("users", req.params.id, req.body);
-    const updatedUser = await getElementById("users", req.params.id);
+    const updatedUser = await updateElementById(
+      "users",
+      req.params.id,
+      req.body
+    );
     res.send(updatedUser);
   } catch (error) {
     res.status(500).send({ message: "Error updating user" });
