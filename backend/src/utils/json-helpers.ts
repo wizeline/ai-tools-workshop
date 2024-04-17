@@ -38,23 +38,23 @@ const writeTable = async (tableName: string, data: any) => {
   );
 };
 
-const createElement = async (tableName: string, data: any) => {
+export const createElement = async (tableName: string, data: any) => {
   if (!data) {
     throw new Error("data is required!");
   }
   const allData = await readAllTable(tableName);
-  const id = Object.keys(allData).length + 1;
+  const id = (Object.keys(allData).length + 1).toString();
   allData[id] = { ...data, id };
   await writeTable(tableName, allData);
   return allData[id];
 };
 
-const getAllTable = async (tableName: string) => {
+export const getAllTable = async (tableName: string) => {
   const data = await readAllTable(tableName);
   return Object.values(data);
 };
 
-const getElementById = async (tableName: string, id: string) => {
+export const getElementById = async (tableName: string, id: string) => {
   if (!id) {
     throw new Error("id is required!");
   }
@@ -62,7 +62,11 @@ const getElementById = async (tableName: string, id: string) => {
   return data[id];
 };
 
-const updateElementById = async (tableName: string, id: string, data: any) => {
+export const updateElementById = async (
+  tableName: string,
+  id: string,
+  data: any
+) => {
   if (!id) {
     throw new Error("id is required!");
   }
@@ -72,10 +76,10 @@ const updateElementById = async (tableName: string, id: string, data: any) => {
   const allData = await readAllTable(tableName);
   allData[id] = { ...allData[id], ...data };
   await writeTable(tableName, allData);
-  return;
+  return allData[id];
 };
 
-const deleteElementById = async (tableName: string, id: string) => {
+export const deleteElementById = async (tableName: string, id: string) => {
   if (!id) {
     throw new Error("id is required!");
   }
@@ -83,12 +87,4 @@ const deleteElementById = async (tableName: string, id: string) => {
   delete allData[id];
   await writeTable(tableName, allData);
   return;
-};
-
-module.exports = {
-  getElementById,
-  getAllTable,
-  updateElementById,
-  deleteElementById,
-  createElement,
 };
