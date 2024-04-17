@@ -93,3 +93,22 @@ app.use(express.json());
 in the file `backend/src/index.ts`.
 
 Our API is ready! Of course, we could still add some things to make it more robust, like session handling for instance. Feel free to keep going to get more accostumed to GitHub Copilot!
+
+## Chapter 4: Add unit tests
+
+### Step 4.1: Add controllers unit tests
+
+Open one of the controllers files and then open the GitHub Copilot chatbox to type:
+> Can you write the unit tests to cover all the controllers in this file?
+
+Copilot will return a response with mocks and a couple of tests. We can then ask them for more detailed tests depending on the coverage of the response provided.
+Examples:
+> Can you add all the remaining tests?
+
+> Can you test the errors too?
+
+...
+
+Now run the tests to make sure that they all pass.
+
+Do the same for the other controllers and other functions you want to test.
