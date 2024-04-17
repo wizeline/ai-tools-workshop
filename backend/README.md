@@ -45,3 +45,51 @@ Here we need to reference both the type file and the users JSON because we want 
 Click on "Insert at Cursor" to populate our activities JSON file.
 
 This is it! Our database is populated with 10 users, and 5 activities, based on their respectives schemas.
+
+&nbsp;
+## Chapter 3: Create our REST API
+
+### Step 3.1: Add our routes in the index file
+
+First, we will create our empty files `backend/src/routes/users.ts` and `backend/src/routes/activities.ts`
+
+Then, we will ask GitHub Copilot:
+> I want my app to use my users and activities routes which will be located in the routes directory. What code should I add?
+
+From the response, we will see that we can add the following lines to the file `backend/src/index.ts`:
+```javascript
+app.use("/users", require("./routes/users"));
+app.use("/activities", require("./routes/activities"));
+```
+
+### Step 3.2: Create our routes
+
+Place you cursor in `backend/src/routes/users.ts` and ask Copilot in the chat:
+> Add all the routes to complete the CRUD for users. We will import the controllers from another place
+
+Note that we did not even specify from where we want to import the controllers, but Copilot will know exactly what to do.
+
+Do the same thing with `backend/src/routes/activities.ts`.
+
+## Step 3.3: Create our controllers
+
+We have already referenced the controllers files in the previous step, but they do not exist yet. Let's create the files `backend/src/controllers/users.ts` and `backend/src/controllers/activities.ts`
+
+Now open the users controllers file and ask Copilot in the chat:
+> `@workspace` create all the controllers to cover all the users routes and using our json database and our helpers in `#file:json-helpers.ts`
+
+Here, the keyword `@workspace` will tell Copilot that it can access the whole repo to find all the necessary information for it to define our controllers.
+
+Depending on the response, you can ask Copilot to add some things like typing, and/or error handling...
+
+Do the same with the activities controllers file.
+
+Now we can test our API.
+
+NB: If the `POST` and `PUT` do not work, it is probably because you need to add:
+```javascript
+app.use(express.json());
+```
+in the file `backend/src/index.ts`.
+
+Our API is ready! Of course, we could still add some things to make it more robust, like session handling for instance. Feel free to keep going to get more accostumed to GitHub Copilot!
