@@ -112,3 +112,13 @@ Examples:
 Now run the tests to make sure that they all pass.
 
 Do the same for the other controllers and other functions you want to test.
+
+## Chapter 5: Resolve bugs with Copilot
+
+Run the project and try to query an specific user, this should throw an error.
+
+Ask copilot to help you solve this
+
+`#terminalSelection how can I fix this error from this #file:users.ts`
+
+After implementing the solution try the reques again.

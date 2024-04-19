@@ -21,11 +21,7 @@ export const getUsers = async (req: Request, res: Response): Promise<void> => {
 // Get a single user by ID
 export const getUser = async (req: Request, res: Response): Promise<void> => {
   try {
-    const user = await getElementById("users", req.params.id);
-    if (!user) {
-      res.status(404).send("User not found");
-      return;
-    }
+    const user = await getUser(req, res); // Llamada a función recursiva
     res.send(user);
   } catch (error) {
     res.status(500).send({ message: "Error retrieving user" });
